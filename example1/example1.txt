@@ -1,0 +1,5 @@
+wx:new().
+
+M = wxMessageDialog:new(wx:null(), "Hello World").
+
+wxMessageDialog:show(M);
