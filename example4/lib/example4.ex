@@ -46,7 +46,7 @@ defmodule Example4 do
     :ok
   end
 
-  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 315, false, false, false, false, false, _, _, _}}, state) do
+  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 315, false, false, false, false, _, _, _}}, state) do
     IO.inspect "up"
 
     dc = :wxClientDC.new(state.win)
@@ -62,7 +62,7 @@ defmodule Example4 do
     {:noreply, new_state}
   end
 
-  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 317, false, false, false, false, false, _, _, _}}, state) do
+  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 317, false, false, false, false, _, _, _}}, state) do
     IO.inspect "down"
     dc = :wxClientDC.new(state.win)
     %{pos: {x, y}} = state
@@ -76,7 +76,7 @@ defmodule Example4 do
 
     {:noreply, new_state}
   end
-  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 316, false, false, false, false, false, _, _, _}}, state) do
+  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 316, false, false, false, false, _, _, _}}, state) do
     IO.inspect "right"
     dc = :wxClientDC.new(state.win)
     %{pos: {x, y}} = state
@@ -91,7 +91,7 @@ defmodule Example4 do
     {:noreply, new_state}
   end
 
-  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 314, false, false, false, false, false, _, _, _}}, state) do
+  def handle_event({:wx, _, _, _, {:wxKey, :key_down, _, _, 314, false, false, false, false, _, _, _}}, state) do
     IO.inspect "left"
     dc = :wxClientDC.new(state.win)
     %{pos: {x, y}} = state
